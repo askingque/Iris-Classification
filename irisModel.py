@@ -31,7 +31,7 @@ X_test -= mean
 
 
 
-#input = [1, 4]
+#input = [150, 4]
 #output = [1, 3]
 print(X_train.shape)
 
@@ -44,7 +44,7 @@ model.add(Dense(16, activation='swish'))
 model.add(Dense(3, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(X_train, y_train, epochs=1000)
+model.fit(X_train, y_train, epochs=100)
 
 print(model.evaluate(X_test, y_test))
 
